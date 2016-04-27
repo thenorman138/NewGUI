@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newgui.Screen3Controller">
+   <children>
+      <StackPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="66.0" fitWidth="57.0" layoutX="7.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../shield-logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="13.0" prefHeight="34.0" prefWidth="261.0" text="Ivy League University">
+                     <font>
+                        <Font name="Kaiti TC Regular" size="17.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="table" layoutX="6.0" layoutY="91.0" prefHeight="454.0" prefWidth="791.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="72.0" text="Course ID" />
+                      <TableColumn fx:id="dept" prefWidth="99.0" text="Department" />
+                        <TableColumn fx:id="number" prefWidth="137.0" text="Course Number" />
+                        <TableColumn fx:id="title" prefWidth="194.0" text="Course Title (hr)" />
+                        <TableColumn fx:id="day" prefWidth="112.0" text="Day" />
+                        <TableColumn fx:id="time" prefWidth="118.0" text="Time" />
+                        <TableColumn fx:id="checkbox" prefWidth="50.0" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="14.0" layoutY="559.0" mnemonicParsing="false" text="Back" />
+                  <Button fx:id="continuebtn" layoutX="712.0" layoutY="559.0" mnemonicParsing="false" onAction="#onContinue" text="Continue" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

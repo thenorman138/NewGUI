@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newgui.Screen4Controller">
+   <children>
+      <ImageView fitHeight="105.0" fitWidth="115.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../shield-logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="112.0" layoutY="27.0" prefHeight="51.0" prefWidth="221.0" text="Ivy League University">
+         <font>
+            <Font name="Kaiti TC Regular" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="276.0" layoutY="283.0" text="Thank You For Registering!" textFill="#1775c3">
+         <font>
+            <Font name="Kaiti TC Regular" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="homeBtn" layoutX="371.0" layoutY="465.0" mnemonicParsing="false" onAction="#homeAction" text="Home" />
+   </children>
+</AnchorPane>
