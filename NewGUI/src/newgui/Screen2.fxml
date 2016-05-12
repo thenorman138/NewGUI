@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newgui.Screen2Controller">
+   <children>
+      <StackPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0">
+               <children>
+                  <ImageView fitHeight="84.0" fitWidth="72.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../shield-logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="83.0" layoutY="33.0" prefHeight="34.0" prefWidth="261.0" text="IVY LEAGUE UNIVERSITY">
+                     <font>
+                        <Font name="Kaiti TC Regular" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="169.0" opacity="0.68" text="Welcome to the Student Registration System!" textAlignment="CENTER" textFill="#2159a8" underline="true">
+                     <font>
+                        <Font name="Kaiti TC Regular" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="234.0" text="Please select the semester/year you would like to view or register for:">
+                     <font>
+                        <Font name="Kaiti TC Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBox" layoutX="260.0" layoutY="322.0" prefHeight="27.0" prefWidth="280.0" promptText="Please Select..." />
+                  <Button fx:id="button2" layoutX="363.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleButtonAction2" text="Continue" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

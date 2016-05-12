@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newgui.FacultyDeleteController">
+   <children>
+      <StackPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <AnchorPane prefHeight="600.0" prefWidth="800.0">
+               <children>
+                  <TableView layoutX="76.0" layoutY="127.0" prefHeight="405.0" prefWidth="648.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="CRN" />
+                        <TableColumn prefWidth="75.0" text="Dept" />
+                        <TableColumn prefWidth="75.0" text="Number" />
+                        <TableColumn prefWidth="134.0" text="Title" />
+                        <TableColumn prefWidth="95.0" text="Date" />
+                        <TableColumn prefWidth="95.0" text="Time" />
+                        <TableColumn prefWidth="98.0" text="Credit" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="86.0" layoutY="34.0" text="IVY LEAGUE UNIVERSITY">
+                     <font>
+                        <Font name="Kaiti TC Regular" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="84.0" fitWidth="72.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../shield-logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="deleteHomeButton" layoutX="14.0" layoutY="550.0" mnemonicParsing="false" onAction="#facultyBackAction" text="Home" />
+                  <Button fx:id="deleteActionButton" layoutX="727.0" layoutY="550.0" mnemonicParsing="false" text="Delete" />
+               </children></AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

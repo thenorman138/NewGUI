@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newgui.FXMLDocumentController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../shield-logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="UserField" layoutX="517.0" layoutY="431.0" promptText="Student ID" />
+            <ScrollBar layoutY="792.0" prefHeight="17.0" prefWidth="1200.0" />
+            <Hyperlink layoutX="1141.0" layoutY="772.0" text="ILU.edu" />
+            <Label layoutX="2.0" layoutY="774.0" text="Trademark Of Ive league University, 2016" />
+            <Label layoutX="149.0" layoutY="36.0" prefHeight="45.0" prefWidth="385.0" text="IVY LEAGUE UNIVERSITY">
+               <font>
+                  <Font name="Kaiti TC Regular" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="506.0" layoutY="517.0" prefHeight="13.0" prefWidth="196.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+              <Button fx:id="button" layoutX="541.0" layoutY="573.0" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="114.0" text="Login (Student)" />
+            <Button fx:id="button2" layoutX="542.0" layoutY="611.0" mnemonicParsing="false" onAction="#facultyButtonAction" prefHeight="27.0" prefWidth="114.0" text="Login (Faculty)" />
+            <PasswordField fx:id="PassField" layoutX="517.0" layoutY="470.0" promptText="Password" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
