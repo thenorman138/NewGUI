@@ -5,19 +5,12 @@
  */
 package newgui;
 
+import java.sql.Connection;
 import javafx.application.Application;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.python.antlr.ast.Print;
 
 /**
  *
@@ -25,6 +18,7 @@ import org.python.antlr.ast.Print;
  */
 public class NewGUI extends Application {
     
+    Connection conn;
     
     
 
@@ -40,11 +34,24 @@ public class NewGUI extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene scene = new Scene(root);
         
+        CheckConnection();
+        
         stage.setScene(scene);
         stage.show();
        
         
         
+    }
+    
+    public void CheckConnection(){
+        
+        conn = databaseConnection.DbConnector();
+        if(conn == null){
+            System.out.println("Connection Not Successful");
+            System.exit(1);
+        }else{
+            System.out.println("Connection Successful");
+        }
     }
 }
 

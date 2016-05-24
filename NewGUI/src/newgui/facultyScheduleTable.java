@@ -17,7 +17,7 @@ public class facultyScheduleTable {
 
    
     
-    private SimpleIntegerProperty CRN;
+    private SimpleStringProperty CRN;
     private SimpleStringProperty Dept;
     private SimpleStringProperty Num;
     private SimpleStringProperty Title;
@@ -29,8 +29,8 @@ public class facultyScheduleTable {
         
     }
     
-    public facultyScheduleTable(int sCRN, String sDept, String sNum, String sTitle, String sDay, String sTime, String sCredits){
-            this.CRN = new SimpleIntegerProperty (sCRN);
+    public facultyScheduleTable(String sCRN, String sDept, String sNum, String sTitle, String sDay, String sTime, String sCredits){
+            this.CRN = new SimpleStringProperty (sCRN);
             this.Dept = new SimpleStringProperty (sDept);
             this.Num = new SimpleStringProperty (sNum);
             this.Title = new SimpleStringProperty (sTitle);
@@ -41,11 +41,11 @@ public class facultyScheduleTable {
             
         }
     
-        public Integer getCRN (){
+        public String getCRN (){
             return CRN.get();
     }
         
-        public void setCRN(Integer v){
+        public void setCRN(String v){
             CRN.set(v);
     }
         

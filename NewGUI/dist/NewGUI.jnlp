@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="NewGUI.jar" size="48533" download="eager" />
+    <jar href="NewGUI.jar" size="44662" download="eager" />
     <jar href="lib/jython.jar" size="28120290" download="eager" />
     <jar href="lib/sqlite-jdbc-3.8.11.2.jar" size="5575351" download="eager" />
   </resources>

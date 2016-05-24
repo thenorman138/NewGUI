@@ -20,11 +20,22 @@
             <Font name="Kaiti TC Regular" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="276.0" layoutY="283.0" text="Thank You For Registering!" textFill="#1775c3">
+      <Label layoutX="276.0" layoutY="128.0" text="Thank You For Registering!" textFill="#1775c3">
          <font>
             <Font name="Kaiti TC Regular" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="homeBtn" layoutX="371.0" layoutY="465.0" mnemonicParsing="false" onAction="#homeAction" text="Logout" />
+      <Button fx:id="homeBtn" layoutX="370.0" layoutY="542.0" mnemonicParsing="false" onAction="#homeAction" text="Logout" />
+      <TableView fx:id="table2" layoutX="50.0" layoutY="174.0" prefHeight="343.0" prefWidth="703.0">
+        <columns>
+          <TableColumn fx:id="id4" prefWidth="75.0" text="CRN" />
+          <TableColumn fx:id="dept4" prefWidth="84.0" text="Dept" />
+            <TableColumn fx:id="number4" prefWidth="66.0" text="Number" />
+            <TableColumn fx:id="title4" prefWidth="177.0" text="Title" />
+            <TableColumn fx:id="day4" prefWidth="93.0" text="Days" />
+            <TableColumn fx:id="time4" prefWidth="139.0" text="Time" />
+            <TableColumn fx:id="credits4" prefWidth="68.0" text="Credits" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

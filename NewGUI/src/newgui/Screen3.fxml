@@ -24,19 +24,20 @@
                         <Font name="Kaiti TC Regular" size="17.0" />
                      </font>
                   </Label>
-                  <TabPane layoutX="34.0" layoutY="108.0" prefHeight="439.0" prefWidth="733.0">
+                  <TabPane layoutX="34.0" layoutY="81.0" prefHeight="381.0" prefWidth="733.0">
                      <tabs>
                         <Tab text="Registration">
                            <content>
-                              <TableView fx:id="table" layoutX="34.0" layoutY="108.0" prefHeight="404.0" prefWidth="733.0">
+                              <TableView fx:id="table" layoutX="34.0" layoutY="108.0" prefHeight="343.0" prefWidth="733.0">
                                 <columns>
-                                  <TableColumn fx:id="id" prefWidth="72.0" text="Course ID" />
+                                  <TableColumn fx:id="id" prefWidth="72.0" text="CRN" />
                                   <TableColumn fx:id="dept" prefWidth="99.0" text="Department" />
-                                    <TableColumn fx:id="number" prefWidth="137.0" text="Course Number" />
-                                    <TableColumn fx:id="title" prefWidth="194.0" text="Course Title (hr)" />
-                                    <TableColumn fx:id="day" prefWidth="77.0" text="Day" />
-                                    <TableColumn fx:id="time" prefWidth="101.0" text="Time" />
-                                    <TableColumn fx:id="checkbox" prefWidth="53.0" />
+                                    <TableColumn fx:id="number" prefWidth="82.0" text="Number" />
+                                    <TableColumn fx:id="title" prefWidth="176.0" text="Course Title " />
+                                    <TableColumn fx:id="day" prefWidth="105.0" text="Day" />
+                                    <TableColumn fx:id="time" prefWidth="104.0" text="Time" />
+                                    <TableColumn fx:id="credits" prefWidth="67.78076171875" text="Credits" />
+                                    <TableColumn fx:id="checkbox" prefWidth="26.21923828125" />
                                 </columns>
                               </TableView>
                            </content>
@@ -59,7 +60,14 @@
                   </TabPane>
                   <Button layoutX="14.0" layoutY="559.0" mnemonicParsing="false" text="Back" />
                   <Button fx:id="continuebtn" layoutX="712.0" layoutY="559.0" mnemonicParsing="false" onAction="#onContinue" text="Continue" />
-                  <Button fx:id="studAddCrseBtn" layoutX="355.0" layoutY="559.0" mnemonicParsing="false" onAction="#onAddCourse" text="Add Course" />
+                  <Button fx:id="testbtn" layoutX="355.0" layoutY="559.0" mnemonicParsing="false" onAction="#testAction" text="Load Courses" />
+                  <TextField fx:id="CRNf" layoutX="28.0" layoutY="477.0" promptText="CRN" />
+                  <TextField fx:id="Deptf" layoutX="219.0" layoutY="477.0" promptText="Department" />
+                  <TextField fx:id="Numf" layoutX="415.0" layoutY="477.0" promptText="Number" />
+                  <TextField fx:id="Titlef" layoutX="606.0" layoutY="477.0" promptText="Title" />
+                  <TextField fx:id="Dayf" layoutX="124.0" layoutY="517.0" promptText="Day" />
+                  <TextField fx:id="Creditsf" layoutX="511.0" layoutY="517.0" promptText="Credits" />
+                  <TextField fx:id="Timef" layoutX="315.0" layoutY="517.0" promptText="Time" />
                </children>
             </AnchorPane>
          </children>
