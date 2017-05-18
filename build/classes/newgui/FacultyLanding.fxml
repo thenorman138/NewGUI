@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newgui.FacultyLandingController">
+   <children>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0">
+         <children>
+            <AnchorPane fx:id="CRNField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0">
+               <children>
+                  <ImageView fitHeight="84.0" fitWidth="72.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../shield-logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="89.0" layoutY="33.0" text="IVY LEAGUE UNIVERSITY">
+                     <font>
+                        <Font name="Kaiti TC Regular" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="151.0" text="Welcome, Professor!" textFill="#2159a8">
+                     <font>
+                        <Font name="Kaiti TC Regular" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="204.0" text="What would you like to do today?" textAlignment="CENTER" textFill="#2159a8">
+                     <font>
+                        <Font name="Kaiti SC Regular" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="37.0" layoutY="487.0" mnemonicParsing="false" onAction="#getSchedTabAction" text="View schedules/students" />
+                  <Button layoutX="37.0" layoutY="524.0" mnemonicParsing="false" onAction="#getAddTabAction" prefHeight="27.0" prefWidth="101.0" text="Add Course" />
+                  <Button layoutX="37.0" layoutY="560.0" mnemonicParsing="false" onAction="#getDeleteTabAction" text="Delete Course" />
+                  <Button fx:id="LogoutButton" layoutX="37.0" layoutY="596.0" mnemonicParsing="false" onAction="#logoutAction" text="Logout" />
+                  <TabPane fx:id="tabPane1" layoutX="260.0" layoutY="72.0" prefHeight="692.0" prefWidth="902.0" style="-fx-border-color: lightBlue;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="SchedTab" text="Current Schedule">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="894.0">
+                                 <children>
+                                    <TableView fx:id="facultyTable" prefHeight="659.0" prefWidth="902.0">
+                                       <columns>
+                                          <TableColumn fx:id="CRNColumn" prefWidth="75.0" text="CRN" />
+                                          <TableColumn fx:id="DeptColumn" prefWidth="75.0" text="Dept" />
+                                          <TableColumn fx:id="NumColumn" prefWidth="75.0" text="Num" />
+                                          <TableColumn fx:id="TitleColumn" prefWidth="198.0" text="Title" />
+                                          <TableColumn fx:id="DayColumn" prefWidth="75.0" text="Day" />
+                                          <TableColumn fx:id="TimeColumn" prefWidth="107.0" text="Time" />
+                                          <TableColumn fx:id="CreditColumn" prefWidth="56.0" text="Credits" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="AddTab" text="Add Course">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="addHomeBtn" layoutX="745.0" layoutY="616.0" mnemonicParsing="false" onAction="#getSchedTabAction" text="Home" />
+                                    <Button fx:id="AddCourseBtn" layoutX="69.0" layoutY="614.0" mnemonicParsing="false" onAction="#addCourseAction" text="Add Course" />
+                                    <TextField fx:id="CourseTitleField" layoutX="15.0" layoutY="320.0" prefHeight="27.0" prefWidth="150.0" promptText="Course Title" />
+                                    <TextField fx:id="CourseNumField" layoutX="14.0" layoutY="283.0" prefHeight="27.0" prefWidth="150.0" promptText="Course Number" />
+                                    <Label layoutX="224.0" layoutY="31.0" text="Please Enter Class Information Below:" textFill="#2159a8">
+                                       <font>
+                                          <Font name="Kaiti TC Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="514.0" layoutY="147.0" text="Addition Status:">
+                                       <font>
+                                          <Font name="Kaiti SC Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="DeptField" layoutX="13.0" layoutY="246.0" prefHeight="27.0" prefWidth="200.0" promptText="Department (ACCT, CPSC..)" />
+                                    <TextField fx:id="DayField" layoutX="15.0" layoutY="357.0" prefHeight="27.0" prefWidth="150.0" promptText="Days (MWF, TR)" />
+                                    <TextField fx:id="TimeField" layoutX="15.0" layoutY="394.0" prefHeight="27.0" prefWidth="150.0" promptText="Time" />
+                                    <TextField fx:id="CreditField" layoutX="15.0" layoutY="430.0" prefHeight="27.0" prefWidth="150.0" promptText="Credits" />
+                                    <TableView fx:id="additionTable" layoutX="221.0" layoutY="172.0" prefHeight="405.0" prefWidth="669.0">
+                                      <columns>
+                                        <TableColumn fx:id="CRNAddCol" prefWidth="75.0" text="CRN" />
+                                          <TableColumn fx:id="DeptAddCol" prefWidth="75.0" text="Dept" />
+                                        <TableColumn fx:id="NumAddCol" prefWidth="75.0" text="Number" />
+                                          <TableColumn fx:id="TitleAddCol" prefWidth="155.8140869140625" text="Title" />
+                                          <TableColumn fx:id="DayAddCol" prefWidth="119.47357177734375" text="Days" />
+                                          <TableColumn fx:id="TimeAddCol" prefWidth="94.52642822265625" text="Time" />
+                                          <TableColumn fx:id="CreditAddCol" prefWidth="72.0001220703125" text="Credits" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="RefreshButton" layoutX="44.0" layoutY="474.0" mnemonicParsing="false" onAction="#refreshAction" text="Refresh" />
+                                    <TextField fx:id="CRNf" layoutX="13.0" layoutY="209.0" promptText="CRN" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="DeleteTab" text="Delete Course">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="deleteTable" layoutX="58.0" layoutY="17.0" prefHeight="476.0" prefWidth="795.0">
+                                      <columns>
+                                        <TableColumn fx:id="CRNDeleteCol" prefWidth="75.0" text="CRN" />
+                                        <TableColumn fx:id="DeptDeleteCol" prefWidth="75.0" text="Dept" />
+                                          <TableColumn fx:id="NumDeleteCol" prefWidth="81.41580200195312" text="Number" />
+                                          <TableColumn fx:id="TitleDeleteCol" prefWidth="279.58416748046875" text="Title" />
+                                          <TableColumn fx:id="DayDeleteCol" prefWidth="88.35003662109375" text="Day" />
+                                          <TableColumn fx:id="TimeDeleteCol" prefWidth="111.2864990234375" text="Time" />
+                                          <TableColumn fx:id="CreditDeleteCol" prefWidth="85.23199462890625" text="Credits" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="DeleteCourseBtn" layoutX="61.0" layoutY="614.0" mnemonicParsing="false" onAction="#deleteCourseAction" text="Delete Selection" />
+                                    <Button fx:id="delHomeBtn" layoutX="795.0" layoutY="615.0" mnemonicParsing="false" onAction="#getSchedTabAction" prefHeight="27.0" prefWidth="59.0" text="Home" />
+                                    <TextField fx:id="dCRNf" layoutX="60.0" layoutY="508.0" prefHeight="27.0" prefWidth="189.0" promptText="CRN" />
+                                    <TextField fx:id="dDeptField" layoutX="302.0" layoutY="507.0" prefHeight="27.0" prefWidth="189.0" promptText="Department" />
+                                    <TextField fx:id="dCourseNumField" layoutX="547.0" layoutY="507.0" prefHeight="27.0" prefWidth="189.0" promptText="Number" />
+                                    <TextField fx:id="dTimeField" layoutX="548.0" layoutY="544.0" prefHeight="27.0" prefWidth="189.0" promptText="Time" />
+                                    <TextField fx:id="dCourseTitleField" layoutX="61.0" layoutY="545.0" prefHeight="27.0" prefWidth="189.0" promptText="Title" />
+                                    <TextField fx:id="dDayField" layoutX="303.0" layoutY="544.0" prefHeight="27.0" prefWidth="189.0" promptText="Days" />
+                                    <TextField fx:id="dCreditField" layoutX="770.0" layoutY="523.0" prefHeight="27.0" prefWidth="86.0" promptText="Credits" />
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                  <ImageView fitHeight="235.0" fitWidth="200.0" layoutX="16.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../professor.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

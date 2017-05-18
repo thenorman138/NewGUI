@@ -69,25 +69,25 @@ public class FXMLDocumentController implements Initializable {
     private boolean ValidCredentials() throws SQLException
     {
         boolean let_in = false;
-        System.out.println("SELECT * FROM userTbl WHERE userID= " + "'" + UserField.getText() + "'" + "AND pass= " + "'" + PassField.getText() + "'");
+        System.out.println("SELECT * FROM userTable WHERE UserName= " + "'" + UserField.getText() + "'" + "AND Password= " + "'" + PassField.getText() + "'");
         
         Connection c = null;
         java.sql.Statement stmt = null;
         try{
-            c = DriverManager.getConnection("jdbc:sqlite:UserData.db");
+            c = DriverManager.getConnection("jdbc:sqlite:/Users/Hunter/NetBeansProjects/NewGUI/studentUser.sqlite");
             c.setAutoCommit(false);
             
             System.out.println("Successful Database Query");
             stmt = c.createStatement();
             
-            ResultSet rs = stmt.executeQuery("SELECT * FROM userTbl WHERE userID= " + "'" + UserField.getText() + "'" + "AND pass= " + "'" + PassField.getText() + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM userTable WHERE UserName= " + "'" + UserField.getText() + "'" + "AND Password= " + "'" + PassField.getText() + "'");
             
             while ( rs.next() ){
-                if (rs.getString("userID") != null && rs.getString("pass") != null){
-                    String username = rs.getString("userID");
-                    System.out.println( "userID = " + username );
-                    String password = rs.getString("pass"); 
-                    System.out.println("pass = " + password); 
+                if (rs.getString("UserName") != null && rs.getString("Password") != null){
+                    String username = rs.getString("UserName");
+                    System.out.println( "UserName = " + username );
+                    String password = rs.getString("Password"); 
+                    System.out.println("Password = " + password); 
                     let_in = true;
                 }
             }
@@ -103,7 +103,15 @@ public class FXMLDocumentController implements Initializable {
         
     }
     
-  
+    @FXML
+    public void facultyButtonAction (ActionEvent event) throws IOException, SQLException  {
+       Parent home_page_parent = FXMLLoader.load(getClass().getResource("FacultyLanding.fxml"));
+       Scene home_page_scene = new Scene(home_page_parent);
+       Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+       app_stage.setScene(home_page_scene);
+       app_stage.show();
+        
+}
     
     
 }
